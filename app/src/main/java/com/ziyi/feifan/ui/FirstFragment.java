@@ -41,15 +41,14 @@ public class FirstFragment extends BaseFragment {
         Banner banner = (Banner) view.findViewById(R.id.banner);
         try {
             List list = new ArrayList();
-            URL uri = new URL( "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543915704854&di=9dd0ba34261886e06df6df31d5a25bc8&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F19%2F99%2F40%2F99y58PIC9DW_1024.jpg");
-            URL uri1 = new URL("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543915704849&di=8b16d25c1213ea010ff0b11cd7255ffa&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F17%2F66%2F84%2F01c58PIC6uk_1024.jpg");
+            URL uri = new URL("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545113474427&di=7ad646b2afabe1f310e9bb39e0de4798&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F17%2F01%2F15%2F51V58PICNre_1024.jpg");
+            URL uri1 = new URL("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545113474425&di=e8c8256ff4dc43ad1db4899277ebd00a&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F51%2F05%2F562dc3971a2aa_1024.jpg");
             list.add(uri);
             list.add(uri1);
             banner.setImages(list).setImageLoader(new GlideImageLoader()).start();
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-
 
         return view;
     }

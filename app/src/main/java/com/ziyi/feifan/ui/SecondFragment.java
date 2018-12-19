@@ -125,13 +125,6 @@ public class SecondFragment extends BaseFragment {
             }
         });
         reflex(tablayout);
-//        //每条之间的分割线
-//        LinearLayout linearLayout = (LinearLayout) tablayout.getChildAt(0);
-//
-//        linearLayout.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
-
-
-
     }
     /**
      * 自定义Tab的View
