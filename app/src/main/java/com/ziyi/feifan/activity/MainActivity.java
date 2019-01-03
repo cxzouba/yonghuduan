@@ -1,16 +1,26 @@
 package com.ziyi.feifan.activity;
 
+import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.vondear.rxtool.RxPermissionsTool;
 import com.ziyi.feifan.R;
 import com.ziyi.feifan.ui.MainFragment;
 import com.ziyi.feifan.ui.view.StatusBarUtil;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Locale;
 
 import me.yokeyword.fragmentation.SupportActivity;
 
@@ -20,7 +30,9 @@ public class MainActivity extends SupportActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        RxPermissionsTool.with(this).addPermission(Manifest.permission.CAMERA)
+                .addPermission(Manifest.permission.ACCESS_COARSE_LOCATION)
+        .addPermission(Manifest.permission.ACCESS_FINE_LOCATION);
         if (savedInstanceState == null) {
             loadRootFragment(R.id.fragment_container, MainFragment.newInstance());
         }
@@ -35,6 +47,7 @@ public class MainActivity extends SupportActivity {
             StatusBarUtil.setStatusBarColor(this, 0x55000000);
         }
         }
+
 
 
 

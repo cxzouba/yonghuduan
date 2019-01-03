@@ -11,5 +11,18 @@
     <style name="TabLayoutTextSize"> <item name="android:textSize">16sp</item> </style>
     <!--设置Tablayout字体加粗-->
     <style name="TabLayoutTextStyle"> <item name="android:textStyle">bold</item> </style>
-
+    <style name="iv_1">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">30px</item>
+        <item name="android:layout_width">14px</item>
+        <item name="android:layout_height">24px</item>
+    </style>
+    <style name="tv_4">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FF2C2C33</item>
+        <item name="android:textSize">28px</item>
+    </style>
 </resources>

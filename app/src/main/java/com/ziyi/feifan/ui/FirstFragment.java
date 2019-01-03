@@ -2,7 +2,7 @@ package com.ziyi.feifan.ui;/**
  * Created by dell on 2017/4/5/0005.
  */
 
-import android.net.Uri;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.youth.banner.Banner;
 import com.ziyi.feifan.R;
+import com.ziyi.feifan.activity.MapViewActivity;
 import com.ziyi.feifan.base.BaseFragment;
 import com.ziyi.feifan.ui.view.GlideImageLoader;
 
@@ -19,11 +20,17 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
+
 
 /**
  * created by LiChengalin at 2017/4/5/0005
  */
 public class FirstFragment extends BaseFragment {
+
+    Unbinder unbinder;
 
     public static FirstFragment newInstance() {
 
@@ -50,6 +57,29 @@ public class FirstFragment extends BaseFragment {
             e.printStackTrace();
         }
 
+        unbinder = ButterKnife.bind(this, view);
         return view;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
+
+    @OnClick({R.id.temai, R.id.daikuan, R.id.baoxian, R.id.weizhang})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.temai:
+                break;
+            case R.id.daikuan:
+                break;
+            case R.id.baoxian:
+                break;
+            case R.id.weizhang:
+                Intent intent = new Intent(getActivity(),MapViewActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 }

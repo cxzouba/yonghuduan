@@ -27,7 +27,7 @@ public class BottomBar extends LinearLayout {
     }
 
     public BottomBar(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        super(context,attrs);
         init(context);
 
     }

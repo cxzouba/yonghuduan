@@ -1,13 +1,57 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.ziyi.feifan.activity.MainActivity">
-
-    <TextView
-        android:gravity="center"
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FC"
+    android:orientation="vertical"
+    tools:context="com.ziyi.feifan.activity.MainActivity">
+    <com.zhy.autolayout.AutoLinearLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="ThirdFragment"/>
+        android:layout_height="60px"/>
+    <com.zhy.autolayout.AutoLinearLayout
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:gravity="right"
+        android:layout_height="88px">
+        <ImageView
+            android:paddingRight="47px"
+            android:src="@mipmap/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:paddingRight="36px"
+            android:src="@mipmap/shezhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-</FrameLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+    <com.zhy.autolayout.AutoLinearLayout
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="93px">
+<TextView
+    android:textColor="#059FFF"
+    android:paddingLeft="53px"
+    android:paddingTop="19px"
+    android:paddingRight="53px"
+    android:paddingBottom="19px"
+    android:background="@drawable/textviewblue"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="登录"/>
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:visibility="gone"
+            android:src="@mipmap/shezhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>
